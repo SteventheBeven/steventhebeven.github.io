@@ -1,0 +1,121 @@
+header,
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+
+body {
+    background-color: #1b2838;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #d4d4d4;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 2rem;
+}
+
+
+
+
+div#wrapper {
+    display: grid;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas:
+        "nav"
+        "about"
+        "classwork"
+        "other"
+        "footer";
+    min-height: 150vh;
+    max-width: 75vw;
+    margin: 0 auto;
+}
+
+
+
+
+header {
+    position: relative;
+    background-color: #171a21;
+    min-height: 20vh;
+}
+
+
+header h1 {
+    position: absolute;
+    bottom: -25px;
+    left: 16px;
+    color: orange;
+    font-size: 5rem;
+}
+
+
+ul.menu {
+    grid-area: nav;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.menu {
+    background-color: #2a475e;
+}
+
+.menu a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+.menu a:hover {
+    background-color: #2d685e;
+}
+
+.menu li {
+    min-width: 33.33333%;
+}
+
+.projects-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+}
+
+.project {
+    padding: 5%;
+}
+
+.project img {
+    align-content: center;
+    width: 100%;
+    padding-bottom: 5%;
+}
+
+a:link {
+    color: White;
+}
+
+a:visited {
+    color: white;
+}
+
+a:hover {
+    color: #2d685e;
+}
+
+footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-rows: auto auto;
+    background-color: #171a21;
+    color: white;
+    justify-items: center;
+    text-align: justify;
+    padding: 3rem 5rem;
+}
