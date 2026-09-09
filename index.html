@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
 </head>
 
 <body>
@@ -20,7 +21,8 @@
     <div id="wrapper">
         <section id="about">
             <h1>About Me</h1>
-            <p>I am a third-year student in the Rochester Institute of Technology's Game Design and Development program.
+            <p>I am a fourth-year student in the Rochester Institute of Technology's Game Design and Development
+                accelerated BS/MS program.
                 In my time here at RIT I have learned about many different aspects of game design and development. I
                 have learned about programming games mainly in Unity using C#, but also using C++ and JavaScript. I have
                 learned about some of the art aspects of game development as well, with 2D and 3D animation and asset
@@ -29,6 +31,47 @@
                 specific skill or tool. In this manner, I've been able to learn another game engine, Godot, as well as
                 been able to improve my game art skills. </p>
             <a href="https://www.linkedin.com/in/steven-poore" target="_blank">LinkedIn</a>
+            <p>
+                This is the introductory text that everyone sees.
+                <span id="more-text" style="display: none;">This is the extra text that was hidden but expands
+                    seamlessly right inside the paragraph.</span>
+                <a href="#" id="toggle-more" onclick="toggleText(event, 'more-text', 'toggle-more')">...Read more</a>
+            </p>
+            <hr>
+        </section>
+
+        <section id="levelsmith">
+            <h1>Levelsmith Labs: Foundry 2D</h1>
+            <div class="single-project">
+                <div>
+                    <a href="https://levelsmithlabs.com/" target="_blank"><img src="media/levelsmithicon.svg"
+                            alt="Levelsmith Labs" title="Levelsmith Labs webpage"></a>
+                </div>
+                <div>
+                    <p>
+                        <b>RIT Entrepreneurial Co-op</b><br>
+                        Summer 2026<br><br>
+                        Worked with a team of twelve as a game developer.<br><br>
+                        A level designing tool created for rapid prototyping purposes of 2D platformer levels. This tool
+                        was
+                        created to allow users to create their own 2D platformer levels with customizable enemy
+                        properties, player properties, and assets.
+                        I created and implemented all asset swapping capabilities to allow the user to change their
+                        sprites, animations,
+                        and audio assets to whatever they like.<br><br>
+                        This project was easily the most professional experience I have had with game development. We
+                        were
+                        a team of twelve total, split into a design team and development team with team leads and one
+                        lead producer.
+                        We utilized task boards and large amounts of documentation to keep everyone on the same page and
+                        better prepare future teams
+                        that might work on the project.<br><br>
+                        Check out our website here: <a href="https://levelsmithlabs.com/" target="_blank">Levelsmith
+                            Labs</a>
+                    </p>
+                </div>
+
+            </div>
             <hr>
         </section>
 
@@ -42,23 +85,33 @@
                     <p>
                         <b>Class:</b> Game Design and Development II<br>
                         Fall 2025<br><br>
-                        Created by team 5 Devs in a Trenchcoat<br><br>
-                        As a semester long project, we created a game about avoiding a light-seeking monster while
-                        trying to escape a factory. Created in Unity 3D, we had a big focus on the lighting and
-                        atmosphere of our game, as well as making a monster that felt scary without being too
-                        strong. The player is given multiple options for avoiding the killer, like toggling their
-                        flashlight, throwing flares, or using other lights in the environment, as well as the
-                        ability to find keys to unlock doors, opening more areas for the player to explore.<br><br>
-                        This class had a major focus on being as similar to a real-world game development as
-                        possible. We each had roles on our team, used Jira to help manage our project, and organized
-                        our work progress into multiple sprints over the course of the semester. I was one of two
-                        main programmers on the team, working across many aspects of our game like player and camera
-                        movement, interactable items like flares, keys, and doors, as well as the UI elements of our
-                        game, like the HUD, pausing, and all the different screens the player might see. My biggest
-                        contribution, and the one I am most proud of, is the monster AI. I created the monster and
-                        programmed all of its behaviors, having it react to lights, searching for the player, and
-                        having multiple different behavior states that it transitions through depending on the
-                        environment surrounding it.<br><br>
+                        Created by team 5 Devs in a Trenchcoat<br>
+                        <span id="scraplight-more" style="display: none">
+                            <br>
+                            As a semester long project, we created a game about avoiding a
+                            light-seeking monster while
+                            trying to escape a factory. Created in Unity 3D, we had a big focus on the lighting and
+                            atmosphere of our game, as well as making a monster that felt scary without being too
+                            strong. The player is given multiple options for avoiding the killer, like toggling their
+                            flashlight, throwing flares, or using other lights in the environment, as well as the
+                            ability to find keys to unlock doors, opening more areas for the player to explore.<br><br>
+                            This class had a major focus on being as similar to a real-world game development as
+                            possible. We each had roles on our team, used Jira to help manage our project, and organized
+                            our work progress into multiple sprints over the course of the semester. I was one of two
+                            main programmers on the team, working across many aspects of our game like player and camera
+                            movement, interactable items like flares, keys, and doors, as well as the UI elements of our
+                            game, like the HUD, pausing, and all the different screens the player might see. My biggest
+                            contribution, and the one I am most proud of, is the monster AI. I created the monster and
+                            programmed all of its behaviors, having it react to lights, searching for the player, and
+                            having multiple different behavior states that it transitions through depending on the
+                            environment surrounding it.<br>
+                        </span>
+                        <a href="#" id="toggle-scraplight"
+                            onclick="toggleText(event, 'scraplight-more', 'toggle-scraplight')">...Read
+                            more</a>
+                        <br>
+                        <br>
+
                         Check out our itch.io page here: <a href="https://rainascallion.itch.io/scraplight"
                             target="_blank">Scraplight</a>
                     </p>
@@ -71,14 +124,26 @@
                     <p>
                         <b>Class:</b> Intro to Game Web Tech<br>
                         Fall 2024<br><br>
-                        Created by myself as a final project for a class.<br><br>
-                        For a final project, using Pixijs and JavaScript, I created a game about stealing diamonds from
-                        a museum while trying to avoid tripping any laser sensors. For this game, I created all of the
-                        assets except for the font. I made the pixel art, animations, and created the sound effects
-                        using jsfxr.<br><br>
-                        For this project, we were also required to make a webpage including instructions, documentation,
-                        credits, and the initial proposal for the project. I was able to create these pages thanks to
-                        the HTML and CSS skills I learned in this class.<br><br>
+                        Created by myself as a final project for a class.<br>
+                        <span id="diamond-more" style="display:none">
+                            <br>
+                            For a final project, using Pixijs and JavaScript, I created a game about stealing diamonds
+                            from
+                            a museum while trying to avoid tripping any laser sensors. For this game, I created all of
+                            the
+                            assets except for the font. I made the pixel art, animations, and created the sound effects
+                            using jsfxr.<br><br>
+                            For this project, we were also required to make a webpage including instructions,
+                            documentation,
+                            credits, and the initial proposal for the project. I was able to create these pages thanks
+                            to
+                            the HTML and CSS skills I learned in this class.<br>
+                        </span>
+                        <a href="#" id="toggle-diamond"
+                            onclick="toggleText(event, 'diamond-more', 'toggle-diamond')">...Read
+                            more</a>
+                        <br>
+                        <br>
                         Check out the game's page here: <a href="https://people.rit.edu/smp6196/235/project3"
                             target="_blank">Diamond Heist</a>
                     </p>
@@ -91,16 +156,28 @@
                         <b>Class:</b> Game Development and Algorithmic Problem Solving II<br>
                         Spring 2024<br><br>
                         Created by four person team Overwhelmingly Negative as our first project together for a
-                        class.<br><br>
-                        As a semester long project, we were required to create a game using Monogame that fit the theme
-                        of "just a stick". We decided to follow this theme by creating a game that could theoretically
-                        be played using just a joystick. We created an autoshooter in which the player has to survive
-                        waves of squirrels attacking them by moving and avoiding them while the mage automatically
-                        shoots at the nearest squirrel.<br><br>
-                        With this being our first game we created, we did not split up our contibutions significantly.
-                        Everyone worked a little bit on every part of the project, from finding assets to programming
-                        the main elements of the game, I, as well as the rest of the group, was involved in it
-                        all.<br><br>
+                        class.<br>
+                        <span id="mage-more" style="display:none">
+                            <br>
+                            As a semester long project, we were required to create a game using Monogame that fit the
+                            theme
+                            of "just a stick". We decided to follow this theme by creating a game that could
+                            theoretically
+                            be played using just a joystick. We created an autoshooter in which the player has to
+                            survive
+                            waves of squirrels attacking them by moving and avoiding them while the mage automatically
+                            shoots at the nearest squirrel.<br><br>
+                            With this being our first game we created, we did not split up our contibutions
+                            significantly.
+                            Everyone worked a little bit on every part of the project, from finding assets to
+                            programming
+                            the main elements of the game, I, as well as the rest of the group, was involved in it
+                            all.<br>
+                        </span>
+                        <a href="#" id="toggle-mage" onclick="toggleText(event, 'mage-more', 'toggle-mage')">...Read
+                            more</a>
+                        <br>
+                        <br>
                         Check out our Itch page here: <a href="https://jrgoehring.itch.io/mage-madness"
                             target="_blank">Mage Madness</a>
                     </p>
@@ -113,26 +190,103 @@
             <h1>Personal Projects</h1>
             <div class="projects-group">
                 <div class="project">
+                    <h2>Calculape</h2>
+                    <a href="https://bawstrerry.itch.io/calculape" target="_blank"> <img src="media/Calculape.png"
+                            alt="Calculape" title="Calculape itch.io page"></a>
+                    <p>
+                        GMTK Game Jam 2026<br>
+                        July 2026<br><br>
+                        Created with five other RIT Students<br>
+                        <span id="ape-more" style="display:none">
+                            <br>
+                            Given the theme "countdown" and four days to make a game, we decided on a simple game in
+                            which
+                            you play as a monkey that has to press values on a screen in a descending order. As the
+                            player
+                            progresses, there are more themes on the buttons that represent values that the player must
+                            keep
+                            track of, such as roman numerals, time on a clock, or amount of apples in a picture. For
+                            this
+                            jam, we wanted to put a large focus on keeping the gameplay simple and giving the game a lot
+                            of
+                            juice. We added sound effects, screen shake, small distractions, and shaders all based
+                            around
+                            the core gameplay of counting down.<br><br>
+                            I worked primarily as a programmer on the game. I created the tutorial for the player to
+                            learn
+                            the game, including the scrolling textboxes and scripted events. I also did a lot of
+                            implementations and making sure everything worked together smoothly.<br>
+                        </span>
+                        <a href="#" id="toggle-ape" onclick="toggleText(event, 'ape-more', 'toggle-ape')">...Read
+                            more</a>
+                        <br>
+                        <br>
+                        Check out our Itch page here: <a href="https://bawstrerry.itch.io/calculape"
+                            target="_blank">Calculape</a>
+                    </p>
+                </div>
+                <div class="project">
+                    <h2>Clueless Wizard</h2>
+                    <a href="https://steventhebeven.itch.io/clueless-wizard" target="_blank"> <img
+                            src="media/GhostMushroomFloat.png" alt="Ghost Mushroom Flying"
+                            title="Clueless Wizard itch.io page"></a>
+                    <p>
+                        RIT Game Dev Club Spring 2026 Game Jam<br>
+                        February 2026<br><br>
+                        Created with two other RIT Students<br>
+                        <span id="clueless-more" style="display:none">
+                            <br>
+                            For this game jam, we were given the theme "clueless" and around 48 hours to create a game
+                            relating to that. We decided to make a game following a wizard who is clueless about what he
+                            is
+                            doing. He has very little control over his wand and does not know how to cast spells
+                            correctly.
+                            He must make it through rooms of angry mushrooms as he casts totally randomized spells with
+                            many
+                            different effects and combinations.<br><br>
+                            For this jam, I worked as both a programmer and artist. My programming work focused on the
+                            mechanics of the spells being cast, and how the different aspects of the spells were
+                            randomly
+                            selected, including the damage, effect, spread pattern, size, and projectile speed. I also
+                            created most of the art for the game.<br>
+                        </span>
+                        <a href="#" id="toggle-clueless"
+                            onclick="toggleText(event, 'clueless-more', 'toggle-clueless')">...Read
+                            more</a>
+                        <br>
+                        <br>
+                        Check out our Itch page here: <a href="https://steventhebeven.itch.io/clueless-wizard"
+                            target="_blank">Clueless Wizard</a>
+                    </p>
+                </div>
+                <div class="project">
                     <h2>Wreck-King</h2>
-                    <a href="https://steventhebeven.itch.io/" target="_blank"> <img src="media/wreck-king.png"
+                    <a href="https://steventhebeven.itch.io/wreck-king" target="_blank"> <img src="media/wreck-king.png"
                             alt="Wreck-King" title="Wreck-King itch.io page"></a>
                     <p>
                         Roll Your Fate Game Jam<br>
                         November 2025<br><br>
-                        Created by my brother, David Poore, and I.<br><br>
-                        Given the chance to roll multiple dice to determine what the criteria would be for our game,
-                        we
-                        rolled the theme "time is a resource", the adventure genre, one button input type, and black
-                        and
-                        white art style. To fit these criteria, we created a game in which the player must launch
-                        themselves as a wrecking ball into buildings and obstacles to try to destroy them within a
-                        certain time limit. The space bar is the only button used throughout the game, even for
-                        navigating menus.<br><br>
-                        For this jam, both of us split up the work pretty evenly, him focusing on the player
-                        controlling
-                        and level design and me focusing on obstacles, menu navigation, and art. For this jam, we
-                        once
-                        again did all of the asset production which I drew all of the art for.<br><br>
+                        Created by my brother, David Poore, and I.<br>
+                        <span id="wreck-more" style="display:none">
+                            <br>
+                            Given the chance to roll multiple dice to determine what the criteria would be for our game,
+                            we
+                            rolled the theme "time is a resource", the adventure genre, one button input type, and black
+                            and
+                            white art style. To fit these criteria, we created a game in which the player must launch
+                            themselves as a wrecking ball into buildings and obstacles to try to destroy them within a
+                            certain time limit. The space bar is the only button used throughout the game, even for
+                            navigating menus.<br><br>
+                            For this jam, both of us split up the work pretty evenly, him focusing on the player
+                            controlling
+                            and level design and me focusing on obstacles, menu navigation, and art. For this jam, we
+                            once
+                            again did all of the asset production which I drew all of the art for.<br>
+                        </span>
+                        <a href="#" id="toggle-wreck" onclick="toggleText(event, 'wreck-more', 'toggle-wreck')">...Read
+                            more</a>
+                        <br>
+                        <br>
                         Check out our Itch page here: <a href="https://steventhebeven.itch.io/wreck-king"
                             target="_blank">Wreck-King</a>
                     </p>
@@ -144,22 +298,30 @@
                     <p>
                         RIT Game Developers Club Halloween 2025 Game Jam<br>
                         October 2025<br><br>
-                        Created by team Overwhelmingly Negative.<br><br>
-                        For this game jam, we were given the theme "shared possesion" and less than 48 hours to make
-                        a
-                        game following that theme. For "shared possession", we created a game where you play as a
-                        man
-                        who must fight for control of his brain from a parasite. The player has to collect enough
-                        money
-                        to enter the hospital and get the parasite removed, they can also pick up meds to slow down
-                        the
-                        parasite's infection progress.<br><br>
-                        This jam was the first that we created all of the assets for rather than finding assets
-                        online.
-                        I was one of the two programmers, coding parts of the game like the obstacles, collectibles,
-                        and
-                        more while also creating a number of the art assets like the main sprite animation,
-                        collectibles, and other sprites.<br><br>
+                        Created by team Overwhelmingly Negative.<br>
+                        <span id="parafright-more" style="display:none">
+                            <br>
+                            For this game jam, we were given the theme "shared possesion" and less than 48 hours to make
+                            a
+                            game following that theme. For "shared possession", we created a game where you play as a
+                            man
+                            who must fight for control of his brain from a parasite. The player has to collect enough
+                            money
+                            to enter the hospital and get the parasite removed, they can also pick up meds to slow down
+                            the
+                            parasite's infection progress.<br><br>
+                            This jam was the first that we created all of the assets for rather than finding assets
+                            online.
+                            I was one of the two programmers, coding parts of the game like the obstacles, collectibles,
+                            and
+                            more while also creating a number of the art assets like the main sprite animation,
+                            collectibles, and other sprites.<br>
+                        </span>
+                        <a href="#" id="toggle-parafright"
+                            onclick="toggleText(event, 'parafright-more', 'toggle-parafright')">...Read
+                            more</a>
+                        <br>
+                        <br>
                         Check out our Itch page here: <a href="https://jrgoehring.itch.io/parafright"
                             target="_blank">Parafright</a>
                     </p>
@@ -171,16 +333,23 @@
                     <p>
                         RIT Game Developers Club x Drawing Club Spring 2025 Game Jam<br>
                         March 2025<br><br>
-                        Created alongside Jefferson Goehring from team Overwhelmingly Negative.<br><br>
-                        For this jam, we were given less than 48 hours to make a game fitting the theme "crush". Our
-                        game, Antageddon, follows a man trying to defend his food from an ant infestation. The
-                        player
-                        must drag around foods while clicking on ants to crush them.<br><br>
-                        Since this jam was done only as a partnership, both Jeff and I worked on programming
-                        together.
-                        He had more of a focus on the programming, however, while I worked on some programming as
-                        well
-                        as finding our assets<br><br>
+                        Created alongside Jefferson Goehring from team Overwhelmingly Negative.<br>
+                        <span id="ant-more" style="display:none">
+                            <br>
+                            For this jam, we were given less than 48 hours to make a game fitting the theme "crush". Our
+                            game, Antageddon, follows a man trying to defend his food from an ant infestation. The
+                            player
+                            must drag around foods while clicking on ants to crush them.<br><br>
+                            Since this jam was done only as a partnership, both Jeff and I worked on programming
+                            together.
+                            He had more of a focus on the programming, however, while I worked on some programming as
+                            well
+                            as finding our assets<br>
+                        </span>
+                        <a href="#" id="toggle-ant" onclick="toggleText(event, 'ant-more', 'toggle-ant')">...Read
+                            more</a>
+                        <br>
+                        <br>
                         Check out our Itch page here: <a href="https://jrgoehring.itch.io/antageddon"
                             target="_blank">Antageddon</a>
                     </p>
@@ -193,16 +362,28 @@
                     <p>
                         RIT X Granola.gg Game Jam<br>
                         October 2024<br><br>
-                        Created by team Overwhelmingly Negative for our first ever game jam.<br><br>
-                        As our first game jam, we had less than 48 hours to make a game fitting the theme "nostalgia".
-                        We decided to follow this theme by creating a game similar to another game from the 80s called
-                        <i>Contra</i>. The game followed an 80s action hero named "John Dude" as he gets relocated into
-                        the medieval times with his machine gun and has to defend against the people of the time who
-                        hunt him down for witchcraft.<br><br>
-                        Because this was our first game jam, we were somewhat disorganized and did not focus on specific
-                        roles. Each member of the group worked on all parts of the game, from designing it to
-                        programming it. This project taught us a lot about developing games, especially under tough time
-                        pressure.<br><br>
+                        Created by team Overwhelmingly Negative for our first ever game jam.<br>
+                        <span id="dude-more" style="display:none">
+                            <br>
+                            As our first game jam, we had less than 48 hours to make a game fitting the theme
+                            "nostalgia".
+                            We decided to follow this theme by creating a game similar to another game from the 80s
+                            called
+                            <i>Contra</i>. The game followed an 80s action hero named "John Dude" as he gets relocated
+                            into
+                            the medieval times with his machine gun and has to defend against the people of the time who
+                            hunt him down for witchcraft.<br><br>
+                            Because this was our first game jam, we were somewhat disorganized and did not focus on
+                            specific
+                            roles. Each member of the group worked on all parts of the game, from designing it to
+                            programming it. This project taught us a lot about developing games, especially under tough
+                            time
+                            pressure.<br>
+                        </span>
+                        <a href="#" id="toggle-dude" onclick="toggleText(event, 'dude-more', 'toggle-dude')">...Read
+                            more</a>
+                        <br>
+                        <br>
                         Check out our Itch page here: <a href="https://jrgoehring.itch.io/dude-shootem-relocated"
                             target="_blank">Dude Shoot'em: Relocated</a>
                     </p>
